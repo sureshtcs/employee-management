@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-employee-management
+  labels:
+    app: 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: k8s-employee-management
+      labels:
+        app: k8s-employee-management
+    spec:
+      containers:
+        - name: k8s-employee-management
+          image: suresh55/k8s-employee-management
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8091
+  selector:
+    matchLabels:
+      app: k8s-employee-management
