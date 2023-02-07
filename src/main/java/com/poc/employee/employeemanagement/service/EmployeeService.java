@@ -25,7 +25,7 @@ public class EmployeeService {
         return employees;
     }
 
-    public Response getEmployeeById(final int employeeId) {
+   /* public Response getEmployeeById(final int employeeId) {
         Response response = new Response();
         Employee employee = employeeRepository.findById(employeeId).get();
         Department department = restTemplate.getForObject("http://department-management/departments/"+employeeId, Department.class);
@@ -34,7 +34,7 @@ public class EmployeeService {
         response.setSalary(employee.getSalary());
         response.setDepartment(department);
         return response;
-    }
+    }*/
 
     public void saveOrUpdate(Employee employee) {
         employeeRepository.save(employee);

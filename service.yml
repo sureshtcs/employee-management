@@ -6,5 +6,7 @@ spec:
   selector:
     app: k8s-employee-management
   ports:
-    - port: 8092
-  type: LoadBalancer
+    - name: http
+      port: 80
+      targetPort: 8091
+  type: NodePort

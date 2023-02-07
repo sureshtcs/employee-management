@@ -22,11 +22,11 @@ public class EmployeeController {
         return employeeService.getAllEmployees();
     }
 
-    @GetMapping("/{id}")
+   /* @GetMapping("/{id}")
     private Response getEmployeeById(@PathVariable("id") int id) {
         return employeeService.getEmployeeById(id);
     }
-
+*/
     @PostMapping("/")
     private ResponseEntity createEmployee(@RequestBody Employee employee) {
         try{
